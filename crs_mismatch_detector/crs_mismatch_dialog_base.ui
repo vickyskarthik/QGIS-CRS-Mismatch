@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CrsMismatchDialogBase</class>
+ <widget class="QDialog" name="CrsMismatchDialogBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1020</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CRS Mismatch Detector</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>8</number>
+   </property>
+   <property name="leftMargin">
+    <number>12</number>
+   </property>
+   <property name="topMargin">
+    <number>12</number>
+   </property>
+   <property name="rightMargin">
+    <number>12</number>
+   </property>
+   <property name="bottomMargin">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="labelOTF">
+     <property name="text">
+      <string>ℹ️  Note: QGIS on-the-fly reprojection may make layers look correct on the map even when their internal CRS differs from the project CRS. These differences can affect measurements, buffers, overlays, and analysis. Use this tool to find and fix such mismatches before analysis.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string>QLabel { background-color: #fff3cd; color: #856404; border: 1px solid #ffc107; border-radius: 4px; padding: 6px 10px; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::SingleSelection</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <column>
+      <property name="text"><string>Layer Name</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Type</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Layer CRS</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Project CRS</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Mismatch Type</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Status</string></property>
+     </column>
+     <column>
+      <property name="text"><string>Action</string></property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="optionsLayout">
+     <item>
+      <widget class="QCheckBox" name="checkBoxShowAll">
+       <property name="text">
+        <string>Show all layers (not only mismatches)</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacerOptions">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeType"><enum>QSizePolicy::Expanding</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkBoxAutoCheck">
+       <property name="text">
+        <string>Auto-check when project opens</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelSummary">
+     <property name="text">
+      <string>Ready. Click Refresh to scan layers.</string>
+     </property>
+     <property name="styleSheet">
+      <string>QLabel { color: #555; font-style: italic; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <widget class="QPushButton" name="btnRefresh">
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+       <property name="toolTip">
+        <string>Rescan all project layers for CRS mismatches</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnReprojectAll">
+       <property name="text">
+        <string>Reproject All Mismatched Layers</string>
+       </property>
+       <property name="toolTip">
+        <string>Create reprojected copies of all mismatched layers</string>
+       </property>
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="spacerButtons">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeType"><enum>QSizePolicy::Expanding</enum></property>
+       <property name="sizeHint" stdset="0">
+        <size><width>40</width><height>20</height></size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
+       <property name="text">
+        <string>Close</string>
+       </property>
+       <property name="toolTip">
+        <string>Close this dialog</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

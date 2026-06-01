@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Generated Qt resources — regenerate with pyrcc5, do not commit
+# (keep resources_rc.py in version control as a stub)
+
+# QGIS plugin packaging output
+*.zip
+release/
+
+# IDE / OS
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Test artefacts
+.pytest_cache/
+.coverage
+htmlcov/
+reports/test_results/unit/*.txt
+reports/test_results/integration/*.txt
+reports/lint/*.txt
+
+# Temporary QGIS files
+*.qgd
+*.qgs~
