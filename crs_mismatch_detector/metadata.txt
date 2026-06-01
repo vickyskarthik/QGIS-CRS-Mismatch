@@ -4,7 +4,7 @@ qgisMinimumVersion=3.10
 description=Scans your QGIS project for layers whose CRS differs from the project CRS and offers safe reprojection by creating new output layers.
 version=1.0.0
 author=Karthik
-email=karthik.sundar@multicorewareinc.com
+email=vickyskarthik@gmail.com
 
 about=CRS Mismatch Detector checks whether the layers in your QGIS project use the same CRS as the project CRS. If a layer uses a different CRS, the plugin marks it as a mismatch and lets you create a corrected reprojected copy. The original layer is never modified.
 
