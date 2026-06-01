@@ -2,6 +2,7 @@
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPLv2-blue.svg)](LICENSE)
 [![QGIS Minimum Version](https://img.shields.io/badge/QGIS-%3E%3D3.10-green.svg)](https://qgis.org)
+[![GitHub](https://img.shields.io/badge/GitHub-vickyskarthik%2FQGIS--CRS--Mismatch-blue.svg)](https://github.com/vickyskarthik/QGIS-CRS-Mismatch)
 
 Scan your QGIS project for layers whose CRS differs from the project CRS, get a clear report, and create safe reprojected copies — without ever modifying your original data.
 

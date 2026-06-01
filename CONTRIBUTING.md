@@ -9,8 +9,8 @@ Thank you for contributing.
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/aive/crs-mismatch-detector.git
-cd crs-mismatch-detector
+git clone https://github.com/vickyskarthik/QGIS-CRS-Mismatch.git
+cd QGIS-CRS-Mismatch
 ```
 
 ### 2. Copy the plugin to your QGIS profile
@@ -86,7 +86,7 @@ reports/test_results/
 ## Reporting Issues
 
 Use the GitHub issue tracker:  
-https://github.com/aive/crs-mismatch-detector/issues
+https://github.com/vickyskarthik/QGIS-CRS-Mismatch/issues
 
 Include:
 - QGIS version.
