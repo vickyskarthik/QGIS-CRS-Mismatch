@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/plugins/crs_mismatch_detector">
+        <file>icons/icon.png</file>
+    </qresource>
+</RCC>
